@@ -1,4 +1,4 @@
-export const get = (req, res, next) => {
+export const get = (req, res) => {
   const pageTitle = res.translate('pageTitle');
 
   res.render('index', {

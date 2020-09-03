@@ -1,3 +1,7 @@
 {
-  "pageTitle": "URLs Shortener and File Storage"
+  "pageTitle": "URLs Shortener and File Storage",
+  "urlToShorten": "URL to shorten",
+  "chooseFile": "Choose a file",
+  "submit": "Get short URL",
+  "or": "or"
 }

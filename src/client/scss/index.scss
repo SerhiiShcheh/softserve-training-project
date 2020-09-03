@@ -1,0 +1,155 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body, html {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #fff;
+  background: #47a3da;
+}
+
+a {
+	color: #f0f0f0;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+}
+
+h1 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 4em;
+  font-weight: normal;
+  color: #fff;
+}
+
+h1, p {
+  text-align: center;
+}
+
+main {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+}
+
+form.form {
+  text-align: center;
+}
+
+form.form span.form__divider {
+  display: block;
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+input.form__text-input {
+  margin: 0 auto;
+  text-align: center;
+	font-size: 1.5rem;
+	padding: 5px 10px;
+	color: #fff;
+	display: block;
+	width: 50%;
+  background: transparent;
+  border: 3px solid #fff;
+  outline: none;
+
+  &:focus {
+    border: 3px solid #1478b1;
+  }
+
+  &:invalid {
+    border: 3px solid red;
+  }
+}
+
+input.form__file-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+label.form__label {
+	display: block;
+	padding: 40px 5px 5px 2px;
+  font-size: 1.25rem;
+  font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+input.form__file-input + label.form__label {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.625rem 1.25rem;
+  color: #fff;
+  border: 3px solid #fff;
+  width: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+input.form__file-input + label.form__label:hover {
+  border: 3px solid #1478b1;
+  color: #1478b1;
+}
+
+input.form__file-input:focus + label.form__label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+input.form__file-input + label.form__label svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  margin-top: -0.25em;
+  margin-right: 0.25em;
+}
+
+.form__submit-input-wrap {
+	text-align: center;
+	padding-top: 40px;
+	clear: both;
+}
+
+input.form__submit-input {
+	background: #10689a;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 1rem 2rem;
+	font-size: 1.1em;
+	border-radius: 2px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+input.form__submit-input:hover {
+	background: #1478b1;
+}

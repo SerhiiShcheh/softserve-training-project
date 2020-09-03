@@ -1,5 +1,5 @@
 import express from 'express';
-import { registerRouteHandlers } from './routing.js';
+import { registerRouteHandlers, registerApiEndpointsHandlers } from './routing.js';
 import { handlebarsEngine, VIEWS_DIRECTORY } from './middlewares/templates-engine.js';
 import { serveStaticMiddleware } from './middlewares/serve-static.js';
 import { requestLoggerMiddleware } from './middlewares/request-logger.js';
@@ -14,9 +14,25 @@ import {
 
 export const application = express();
 
+/**
+ * An application where all of the handles for pages and API will be registered
+ */
 const applicationRouter = express.Router({
   mergeParams: true,
 });
+
+/**
+ * An application where only API v1 handlers will be registered
+ */
+const applicationApiV1Router = express.Router({
+  mergeParams: true,
+});
+
+/**
+ * Attach API Router to Application Router.
+ * API endpoint will always start with /api/v1 prefix.
+ */
+applicationRouter.use('/api/v1', applicationApiV1Router);
 
 // enable escaping JSON responses (<, >, and & as Unicode escape sequences)
 application.set('json escape', true);
@@ -37,10 +53,10 @@ application.set('view engine', 'hbs');
 
 // Setup other request middlewares
 application.use(
+  requestLoggerMiddleware,
   serveStaticMiddleware,
   jsonBodyParseMiddleware,
   urlencodedBodyParseMiddleware,
-  requestLoggerMiddleware,
   internationalizationMiddleware,
   compressionMiddleware,
 );
@@ -51,6 +67,11 @@ application.use(
  * request), but before setting up errors handling middlewares
  */
 registerRouteHandlers(applicationRouter);
+
+/**
+ * Register handlers for API v1 endpoints.
+ */
+registerApiEndpointsHandlers(applicationApiV1Router);
 
 /**
  * Apply optional locale provided in the URL to the request parameters and

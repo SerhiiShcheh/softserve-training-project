@@ -12,7 +12,7 @@ const logger = winston.createLogger({
   level: 'verbose',
   format: winston.format.json(),
   exitOnError: false,
-  transports: []
+  transports: [],
 });
 
 if (NODE_ENV === 'development') {
@@ -21,7 +21,7 @@ if (NODE_ENV === 'development') {
     handleRejections: true,
     format: winston.format.combine(
       winston.format.colorize(),
-      winston.format.simple()
+      winston.format.simple(),
     ),
   });
 
@@ -44,7 +44,7 @@ if (NODE_ENV === 'development') {
 }
 
 logger.stream = {
-  write: (message, encoding) => {
+  write: (message) => {
     logger.http(message);
   },
 };
