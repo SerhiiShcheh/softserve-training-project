@@ -1,6 +1,8 @@
 export const get = (req, res, next) => {
+  const pageTitle = res.translate('pageTitle');
+
   res.render('index', {
-    pageTitle: 'URLs shortener and files storage',
+    pageTitle,
     stylesheets: ['css/index.css'],
     javascript: ['js/index.js']
   });
