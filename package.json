@@ -1,0 +1,52 @@
+{
+  "private": true,
+  "name": "softserve-training-project",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Project template for Node.js training",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run dev:sass & npm run dev:js & npm run dev:server",
+    "dev:server": "nodemon --config nodemon-server.json",
+    "dev:sass": "nodemon --config nodemon-sass.json",
+    "dev:js": "nodemon --config nodemon-javascript.json",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/primeare/softserve-training-project.git"
+  },
+  "keywords": [
+    "nodejs",
+    "training"
+  ],
+  "author": "Vladyslav Dukhin <vladyslav.dukhin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/primeare/softserve-training-project/issues"
+  },
+  "homepage": "https://github.com/primeare/softserve-training-project#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "helmet": "^4.1.0",
+    "i18n": "^0.13.2",
+    "moment": "^2.27.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "pg": "^8.3.3",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.8.1",
+    "jest": "^26.4.2",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
+    "postcss": "^7.0.32",
+    "terser": "^5.2.1"
+  }
+}

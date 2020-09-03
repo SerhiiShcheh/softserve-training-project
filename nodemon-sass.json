@@ -1,0 +1,15 @@
+{
+  "verbose": false,
+  "restartable": "rs-sass",
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules",
+    "public"
+  ],
+  "exec": "node scripts/build-stylesheets.js",
+  "watch": ["src/client/scss"],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "scss"
+}

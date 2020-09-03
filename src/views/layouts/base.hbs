@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{locale}}" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{pageTitle}}</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+
+    {{!-- Load page stylesheets --}}
+    {{~#if stylesheets}}
+      {{~#each stylesheets}}
+        <link href="{{this}}" rel="stylesheet">
+      {{~/each}}
+    {{~/if}}
+
+    {{!-- Start preloading page JavaScript --}}
+    {{~#if javascript}}
+      {{~#each javascript}}
+        <link href="{{this}}" rel="preload" as="script">
+      {{~/each}}
+    {{~/if}}
+  </head>
+  <body>
+    {{{ body }}}
+    {{!-- Load page JavaScript --}}
+    {{~#if javascript}}
+      {{~#each javascript}}
+        <script src="{{this}}"></script>
+      {{~/each}}
+    {{~/if}}
+  </body>
+</html>

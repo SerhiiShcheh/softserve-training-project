@@ -1,0 +1,15 @@
+{
+  "verbose": false,
+  "restartable": "rs-server",
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules",
+    "public",
+    "src/client"
+  ],
+  "exec": "node --require dotenv/config --inspect src/server.js",
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js,mjs,cjs,json"
+}
