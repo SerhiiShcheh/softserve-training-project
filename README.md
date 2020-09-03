@@ -9,7 +9,7 @@ The goal of this project is to create a fully-working URLs shortener application
 
 On the [main application page](http://localhost:3000/) user can see the form where they can choose to either shorten a URL or upload a file. In this scenario, the URL shortening is performed.
 
-User inputs an absolute URL (ex. https://www.youtube.com) to the form and clicks on the "Get short URL" button. After that they see the page or a popup window with the generated short URL in format: http://localhost:3000/{short URL} (ex. http://localhost:3000/aBcdE). Generated short URL should be random set of alphanumeric characters and be no longer than 5 symbols.
+User inputs an absolute URL (ex. https://www.youtube.com) to the form and clicks on the "Get short URL" button. After that they see the page or a popup window with the generated short URL in format: `http://localhost:3000/{shortURL}` (ex. http://localhost:3000/aBcdE). Generated short URL should be random set of alphanumeric characters and be no longer than 5 symbols.
 
 A request from the user is sent to the server as POST request in "multipart/form-data" enctype. Server responds shortened URL to the user with HTTP status code "201 Created".
 
@@ -23,7 +23,7 @@ When user opens a shortened URL, server should redirect them to the original URL
 
 On the [main application page](http://localhost:3000/) user can see the form where they can choose to either shorten a URL or upload a file.
 
-User chooses a file they want to upload and clicks on the "Get short URL" button. After that they see the page or a popup window with the generated short URL in format: http://localhost:3000/{short URL} (ex. http://localhost:3000/aBcdE). Generated short URL should be random set of alphanumeric characters and be no longer than 5 symbols. Generated short URL must not contain file extension.
+User chooses a file they want to upload and clicks on the "Get short URL" button. After that they see the page or a popup window with the generated short URL in format: `http://localhost:3000/{shortURL}` (ex. http://localhost:3000/aBcdE). Generated short URL should be random set of alphanumeric characters and be no longer than 5 symbols. Generated short URL must not contain file extension.
 
 A request from the user is sent to the server as POST request in "multipart/form-data" enctype. Server responds shortened URL to the user with HTTP status code "201 Created".
 
@@ -44,7 +44,7 @@ Install project dependencies by executing command:
 npm install
 ```
 
-See the [Q&A](#Q&A) section of this document to find out how to start the server.
+See the [Q&A](#qa) section of this document to find out how to start the server.
 
 ## Q&A
 
