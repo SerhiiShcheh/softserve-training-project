@@ -12,6 +12,7 @@ try {
   httpServer = createHttpServer(application);
   httpServer.listen(SERVER_LISTEN_PORT);
   logger.info(`HTTP Server started listening on port ${SERVER_LISTEN_PORT}`);
+  logger.info(`You can see the application on http://localhost:${SERVER_LISTEN_PORT}`);
 } catch (err) {
   logger.error(err);
   process.exit(1);

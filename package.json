@@ -6,7 +6,7 @@
   "description": "Project template for Node.js training",
   "main": "src/server.js",
   "scripts": {
-    "dev": "npm run dev:sass & npm run dev:js & npm run dev:server",
+    "dev": "concurrently -i -k -c 'magenta,yellow,green.bold' -n sass,js,server 'npm run dev:sass' 'npm run dev:js' 'npm run dev:server'",
     "dev:server": "nodemon --config nodemon-server.json",
     "dev:sass": "nodemon --config nodemon-sass.json",
     "dev:js": "nodemon --config nodemon-javascript.json",
@@ -44,6 +44,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
+    "concurrently": "^5.3.0",
     "dotenv": "^8.2.0",
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.4",
