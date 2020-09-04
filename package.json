@@ -6,7 +6,7 @@
   "description": "Project template for Node.js training",
   "main": "src/server.js",
   "scripts": {
-    "dev": "concurrently -i -k -c 'magenta,yellow,green.bold' -n sass,js,server 'npm run dev:sass' 'npm run dev:js' 'npm run dev:server'",
+    "dev": "concurrently -i -k -c \"magenta,yellow,green.bold\" -n sass,js,server \"npm run dev:sass\" \"npm run dev:js\" \"npm run dev:server\"",
     "dev:server": "nodemon --config nodemon-server.json",
     "dev:sass": "nodemon --config nodemon-sass.json",
     "dev:js": "nodemon --config nodemon-javascript.json",
