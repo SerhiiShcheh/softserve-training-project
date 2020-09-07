@@ -37,7 +37,7 @@ async function renderJavaScriptFile(sourcePath, destinationPath) {
 
   if (renderResult.warnings) {
     renderResult.warnings.forEach(warning => {
-      console.log(`${sourceFilePath} ${warning}`);
+      console.log(`${sourcePath} ${warning}`);
     });
   }
 
