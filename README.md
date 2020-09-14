@@ -69,3 +69,13 @@ It will build production-ready assets and start the server in production mode. N
 ```bash
 npm run production
 ```
+
+### How to run linter (static code analysis) ?
+
+> Linter is a program that checks the code for compliance with standards according to a certain set of rules.
+
+To run linter against code in the project, run this command:
+
+```bash
+npm test
+```
